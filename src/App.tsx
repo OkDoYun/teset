@@ -1,11 +1,7 @@
 import './App.css'
 
 function App() {
-  return (
-    <div className="h-full w-full">
-      <div>React Boilerplate</div>
-    </div>
-  )
+  return <div className="App">React BoilerPlate</div>
 }
 
 export default App
