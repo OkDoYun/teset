@@ -1,5 +1,3 @@
-import { Box } from 'src/components'
-
 export const SignInTempalte = () => {
-  return <Box>SignInTempalte</Box>
+  return <div css={{ color: 'blue' }}>SignInTempalte</div>
 }

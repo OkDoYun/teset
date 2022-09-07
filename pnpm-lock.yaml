@@ -1,10 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@emotion/babel-preset-css-prop': ^11.10.0
+  '@babel/preset-react': ^7.18.6
+  '@emotion/babel-plugin': ^11.10.2
   '@emotion/react': ^11.10.4
   '@emotion/styled': ^11.10.4
-  '@musma/eslint-config-react': ^0.0.5
+  '@musma/eslint-config-react': ^0.0.6
   '@react-google-maps/api': ^2.12.2
   '@types/google.maps': ^3.50.0
   '@types/react': ^18.0.18
@@ -50,8 +51,9 @@ dependencies:
   yup: 0.32.11
 
 devDependencies:
-  '@emotion/babel-preset-css-prop': 11.10.0
-  '@musma/eslint-config-react': 0.0.5_typescript@4.8.2
+  '@babel/preset-react': 7.18.6
+  '@emotion/babel-plugin': 11.10.2
+  '@musma/eslint-config-react': 0.0.6_typescript@4.8.2
   '@types/google.maps': 3.50.0
   '@types/react': 18.0.18
   '@types/react-dom': 18.0.6
@@ -330,6 +332,24 @@ packages:
       '@babel/helper-plugin-utils': 7.19.0
     dev: true
 
+  /@babel/plugin-transform-react-display-name/7.18.6:
+    resolution: {integrity: sha512-TV4sQ+T013n61uMoygyMRm+xf04Bd5oqFpv2jAEQwSZ8NwQA7zeRPg1LMVg2PWi3zWBz+CLKD+v5bcpZ/BS0aA==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/helper-plugin-utils': 7.19.0
+    dev: true
+
+  /@babel/plugin-transform-react-jsx-development/7.18.6:
+    resolution: {integrity: sha512-SA6HEjwYFKF7WDjWcMcMGUimmw/nhNRDWxr+KaLSCrkD/LMDBvWRmHAYgE1HDeF8KUuI8OAu+RT6EOtKxSW2qA==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/plugin-transform-react-jsx': 7.19.0
+    dev: true
+
   /@babel/plugin-transform-react-jsx-development/7.18.6_@babel+core@7.19.0:
     resolution: {integrity: sha512-SA6HEjwYFKF7WDjWcMcMGUimmw/nhNRDWxr+KaLSCrkD/LMDBvWRmHAYgE1HDeF8KUuI8OAu+RT6EOtKxSW2qA==}
     engines: {node: '>=6.9.0'}
@@ -387,6 +407,30 @@ packages:
       '@babel/types': 7.19.0
     dev: true
 
+  /@babel/plugin-transform-react-pure-annotations/7.18.6:
+    resolution: {integrity: sha512-I8VfEPg9r2TRDdvnHgPepTKvuRomzA8+u+nhY7qSI1fR2hRNebasZEETLyM5mAUr0Ku56OkXJ0I7NHJnO6cJiQ==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/helper-annotate-as-pure': 7.18.6
+      '@babel/helper-plugin-utils': 7.19.0
+    dev: true
+
+  /@babel/preset-react/7.18.6:
+    resolution: {integrity: sha512-zXr6atUmyYdiWRVLOZahakYmOBHtWc2WGCkP8PYTgZi0iJXDY2CN180TdrIW4OGOAdLc7TifzDIvtx6izaRIzg==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/helper-plugin-utils': 7.19.0
+      '@babel/helper-validator-option': 7.18.6
+      '@babel/plugin-transform-react-display-name': 7.18.6
+      '@babel/plugin-transform-react-jsx': 7.19.0
+      '@babel/plugin-transform-react-jsx-development': 7.18.6
+      '@babel/plugin-transform-react-pure-annotations': 7.18.6
+    dev: true
+
   /@babel/runtime/7.19.0:
     resolution: {integrity: sha512-eR8Lo9hnDS7tqkO7NsV+mKvCmv5boaXFSZ70DnfhcgiEne8hv9oCEd36Klw74EtizEqLsy4YnW8UWwpBVolHZA==}
     engines: {node: '>=6.9.0'}
@@ -436,14 +480,6 @@ packages:
       '@babel/helper-validator-identifier': 7.18.6
       to-fast-properties: 2.0.0
 
-  /@emotion/babel-plugin-jsx-pragmatic/0.2.0:
-    resolution: {integrity: sha512-VPfKAtb/bVyu5y+HzCPj9bb2nHnj9yX5mMAU7N0pIDcrFZo8aqDyHXLYF8BD7tY4pNL09N87dygVLKIkQvshJw==}
-    peerDependencies:
-      '@babel/core': ^7.0.0
-    dependencies:
-      '@babel/plugin-syntax-jsx': 7.18.6
-    dev: true
-
   /@emotion/babel-plugin/11.10.2:
     resolution: {integrity: sha512-xNQ57njWTFVfPAc3cjfuaPdsgLp5QOSuRsj9MA6ndEhH/AzuZM86qIQzt6rq+aGBwj3n5/TkLmU5lhAfdRmogA==}
     peerDependencies:
@@ -461,17 +497,6 @@ packages:
       find-root: 1.1.0
       source-map: 0.5.7
       stylis: 4.0.13
-
-  /@emotion/babel-preset-css-prop/11.10.0:
-    resolution: {integrity: sha512-oN2lCP0NJTEt80IIeFM1RbmapeEVNYzKXYk2pYirAuom9WvV9Oz/aJQN5Hn3RyBMPaY+Of1OZYpTVMle2jUm4g==}
-    peerDependencies:
-      '@babel/core': ^7.0.0
-    dependencies:
-      '@babel/plugin-transform-react-jsx': 7.19.0
-      '@babel/runtime': 7.19.0
-      '@emotion/babel-plugin': 11.10.2
-      '@emotion/babel-plugin-jsx-pragmatic': 0.2.0
-    dev: true
 
   /@emotion/cache/11.10.3:
     resolution: {integrity: sha512-Psmp/7ovAa8appWh3g51goxu/z3iVms7JXOreq136D8Bbn6dYraPnmL6mdM8GThEx9vwSn92Fz+mGSjBzN8UPQ==}
@@ -690,8 +715,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@musma/eslint-config-react/0.0.5_typescript@4.8.2:
-    resolution: {integrity: sha512-oo7xEeLhMy3wCLwNn2cpKkfK6JgG30Sb3kJTh6CpmQkSwLYpLlWo1/X417lsQXpjDqSGsFB4hj4fFLdhYeXr4A==, tarball: download/@musma/eslint-config-react/0.0.5/99403c8db3a11f5b1ea0c183ba37a8287bcf9d5c}
+  /@musma/eslint-config-react/0.0.6_typescript@4.8.2:
+    resolution: {integrity: sha512-9eJKJCvIMG+/r4cXdYFBMKoOchnopK5WA75HeNQhoojWOgKgaEc70/nDEButJiXeH7LTK96Gt3LCEYhijY4wEQ==, tarball: download/@musma/eslint-config-react/0.0.6/5ad2f2b8fe39654933af458d63511eb94b87ef07}
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.36.2_iurrlxgqcgk5svigzxakafpeuu
       '@typescript-eslint/parser': 5.36.2_yqf6kl63nyoq5megxukfnom5rm
