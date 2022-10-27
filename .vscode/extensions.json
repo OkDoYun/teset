@@ -5,6 +5,8 @@
     "eamodio.gitlens",
     "pkief.material-icon-theme",
     "wayou.vscode-todo-highlight",
-    "codeandstuff.package-json-upgrade"
+    "codeandstuff.package-json-upgrade",
+    "formulahendry.auto-rename-tag",
+    "meganrogge.template-string-converter"
   ]
 }
